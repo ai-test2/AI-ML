@@ -22,8 +22,6 @@ odabrana_aplikacija = st.sidebar.segmented_control(
     default="Kauzalni ML"
 )
 
-from streamlit_option_menu import option_menu
-
 with st.sidebar:
     odabrana_aplikacija = option_menu(
         menu_title="Glavni izbornik",

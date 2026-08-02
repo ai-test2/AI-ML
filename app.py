@@ -11,59 +11,6 @@ st.set_page_config(
 st.sidebar.title("AI & ML modeli")
 st.sidebar.markdown("---")
 
-st.sidebar.markdown("### Odaberite model")
-
-opcije = ["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"]
-
-# Inicijalizacija stanja
-if "odabrana_aplikacija" not in st.session_state:
-    st.session_state.odabrana_aplikacija = "Kauzalni ML"
-
-# Prikaz gumba jedan ispod drugog
-for opcija in opcije:
-    # Provjeravamo je li trenutna opcija odabrana da promijenimo stil/izgled
-    is_selected = (st.session_state.odabrana_aplikacija == opcija)
-    
-    # Koristimo st.button s punom širinom unutar sidebara
-    if st.sidebar.button(
-        opcija, 
-        key=f"btn_{opcija}", 
-        use_container_width=True,
-        type="primary" if is_selected else "secondary"
-    ):
-        st.session_state.odabrana_aplikacija = opcija
-        st.rerun()
-
-odabrana_aplikacija = st.session_state.odabrana_aplikacija
-
-
-
-
-from streamlit_option_menu import option_menu
-
-with st.sidebar:
-    st.markdown("### Odaberite model")
-    
-    odabrana_aplikacija = option_menu(
-        menu_title=None,  # Sakrivamo glavni naslov izbornika jer već imamo markdown iznad
-        options=["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
-        icons=None,  # Maknuli smo ikonice da bude potpuno minimalistički (samo tekst)
-        default_index=0,
-        styles={
-            "container": {"padding": "0!important", "background-color": "transparent"},
-            "icon": {"color": "orange", "font-size": "14px"}, 
-            "nav-link": {
-                "font-size": "15px",
-                "text-align": "left",
-                "margin": "0px",
-                "--hover-color": "#eee", # Suptilna boja na hover
-            },
-            "nav-link-selected": {"background-color": "#02ab21"}, # Boja kada je odabrano (možeš prilagoditi)
-        }
-    )
-
-
-
 from streamlit_option_menu import option_menu
 
 with st.sidebar:

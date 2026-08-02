@@ -41,7 +41,6 @@ with st.sidebar:
             },
         }
     )
-        }
     )
 
 st.sidebar.markdown("---")

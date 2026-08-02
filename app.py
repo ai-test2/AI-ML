@@ -47,8 +47,7 @@ st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")
 
 
 # Donji dio sidebara (ispravno uvučeno unutar 'with bottom_container:')
-   
-    with bottom_container:
+    bottom_container = st.container()
         st.sidebar.markdown("---")
         st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")
 

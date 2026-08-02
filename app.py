@@ -53,14 +53,6 @@ with st.sidebar:
 
 
 
-    
-# Donji dio sidebara (ispravno uvučeno unutar 'with bottom_container:')
-    bottom_container = st.container()
-    with bottom_container:
-        st.sidebar.markdown("---")
-        st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")
-
-
 
 
 # 3. GLAVNI RADNI PROSTOR

@@ -43,11 +43,20 @@ with st.sidebar:
     )
 
 
-# Korištenje HTML div-a s margin-top: auto koji garantirano "gura" sadržaj na dno
+# Fiksno pozicioniranje na dno sidebara pomoću CSS absolute pozicije
     st.markdown("""
-        <div class="sidebar-footer">
-            <hr style="margin: 10px 0;">
-            <p style="font-size: 12px; color: gray; margin: 0;">Sistem v1.0 | Streamlit & GitHub Connected</p>
+        <style>
+            .fixed-footer {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+                width: auto;
+            }
+        </style>
+        <div class="fixed-footer">
+            <hr style="margin: 10px 0; border: none; border-top: 1px solid rgba(150,150,150,0.2);">
+            <p style="font-size: 12px; color: gray; margin: 0; text-align: center;">Sistem v1.0 | Streamlit & GitHub Connected</p>
         </div>
     """, unsafe_allow_html=True)
 

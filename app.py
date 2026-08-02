@@ -42,13 +42,6 @@ with st.sidebar:
         }
     )
 
-# 1. Stavljamo vertikalni razmak (gura sve ispod prema dnu, ovisno o količini slobodnog prostora)
-    
-    
-    # 2. Tehnička napomena na dnu
-    st.markdown("---")
-    st.caption("Sistem v1.0 | Streamlit & GitHub Connected")
-
 st.markdown("<br>" * 10, unsafe_allow_html=True) 
 st.sidebar.markdown("---")
 st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")

@@ -42,6 +42,18 @@ with st.sidebar:
         }
     )
 
+
+# Korištenje HTML div-a s margin-top: auto koji garantirano "gura" sadržaj na dno
+    st.markdown("""
+        <div class="sidebar-footer">
+            <hr style="margin: 10px 0;">
+            <p style="font-size: 12px; color: gray; margin: 0;">Sistem v1.0 | Streamlit & GitHub Connected</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+
+
+    
 # Donji dio sidebara (ispravno uvučeno unutar 'with bottom_container:')
     bottom_container = st.container()
     with bottom_container:

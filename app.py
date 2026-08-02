@@ -42,21 +42,6 @@ with st.sidebar:
         }
     )
 
-odabrana_aplikacija = st.sidebar.segmented_control(
-    "Odaberite model",
-    ["Kauzalni ML", 
-     "Prediktivni ML", 
-     "Sentiment Analiza"],
-    default="Kauzalni ML"
-)
-
-
-
-
-
-
-
-
 st.sidebar.markdown("---")
 st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")
 

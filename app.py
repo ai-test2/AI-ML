@@ -8,11 +8,11 @@ st.set_page_config(
     layout="wide"
 )
 # 2. LIJEVI PANEL (SIDEBAR) - Meni sa aplikacijama
-st.sidebar.title("App")
+st.sidebar.title("AI & ML modeli")
 st.sidebar.markdown("---")
 
-odabrana_aplikacija = st.sidebar.radio(
-    "Odaberite modul:",
+odabrana_aplikacija = st.sidebar.pills(
+    "Odaberite model",
     ["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"]
 )
 

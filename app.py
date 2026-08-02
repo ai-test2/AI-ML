@@ -22,13 +22,6 @@ odabrana_aplikacija = st.sidebar.segmented_control(
     default="Kauzalni ML"
 )
 
-    odabrana_aplikacija = option_menu(
-        menu_title="Glavni izbornik",
-        options=["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
-        icons=["graph-up", "cpu", "chat-heart"], # opcionalno ikone iz Bootstrapa
-        menu_icon="cast",
-        default_index=0,
-    )
 
 
 

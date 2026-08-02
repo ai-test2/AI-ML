@@ -22,7 +22,6 @@ odabrana_aplikacija = st.sidebar.segmented_control(
     default="Kauzalni ML"
 )
 
-with st.sidebar:
     odabrana_aplikacija = option_menu(
         menu_title="Glavni izbornik",
         options=["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],

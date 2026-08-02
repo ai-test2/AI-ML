@@ -53,7 +53,7 @@ if odabrana_aplikacija == "Kauzalni ML":
     
     # Gumbovi / Tabovi na vrhu radnog prostora za tok rada (Workflow)
     korak1, korak2, korak3 = st.tabs([
-        "Učitaj Biblioteke   ", 
+        "Učitaj Biblioteke <\p>  ", 
         "Upload Podataka   ", 
         "Pokreni Analizu   "
     ])

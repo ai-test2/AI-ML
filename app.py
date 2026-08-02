@@ -42,16 +42,12 @@ with st.sidebar:
         }
     )
 
-
-# Dodajemo nekoliko praznih redova da odmaknemo napomenu prema dolje bez preklapanja
     st.write("")
-    st.write("")
-    st.write("")
+# Uredan razmak pomoću CSS-a koji uvijek izgleda isto na svakom ekranu, bez preklapanja
+    st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
     
-    # Uredna linija i napomena
     st.markdown("<hr style='margin: 5px 0; opacity: 0.2;'>", unsafe_allow_html=True)
     st.caption("Sistem v1.0 | Streamlit & GitHub Connected")
-
 
 
 

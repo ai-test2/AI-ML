@@ -42,7 +42,9 @@ with st.sidebar:
         }
     )
 
-st.markdown("<br>" * 10, unsafe_allow_html=True) 
+# Donji dio sidebara (automatski se lijepi za dno)
+    bottom_container = st.container()
+    with bottom_container:
 st.sidebar.markdown("---")
 st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")
 

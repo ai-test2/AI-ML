@@ -16,6 +16,37 @@ odabrana_aplikacija = st.sidebar.pills(
     ["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"]
 )
 
+
+odabrana_aplikacija = st.sidebar.pills(
+    "Odaberite model",
+    ["Kauzalni ML", 
+     "Prediktivni ML", 
+     "Sentiment Analiza"]
+)
+
+odabrana_aplikacija = st.sidebar.segmented_control(
+    "Odaberite model",
+    ["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
+    default="Kauzalni ML"
+)
+
+from streamlit_option_menu import option_menu
+
+with st.sidebar:
+    odabrana_aplikacija = option_menu(
+        menu_title="Glavni izbornik",
+        options=["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
+        icons=["graph-up", "cpu", "chat-heart"], # opcionalno ikone iz Bootstrapa
+        menu_icon="cast",
+        default_index=0,
+    )
+
+
+
+
+
+
+
 st.sidebar.markdown("---")
 st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")
 

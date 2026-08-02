@@ -48,14 +48,14 @@ with st.sidebar:
 
 # 3. GLAVNI RADNI PROSTOR
 if odabrana_aplikacija == "Kauzalni ML":
-    st.title("🎯 Kauzalni ML Modul")
+    st.title("Kauzalni ML")
     st.write("Dobrodošli u modul za kauzalno modeliranje. Pratite korake ispod:")
     
     # Gumbovi / Tabovi na vrhu radnog prostora za tok rada (Workflow)
     korak1, korak2, korak3 = st.tabs([
-        "1. 📦 Učitaj Biblioteke", 
-        "2. 📂 Upload Podataka", 
-        "3. 🚀 Pokreni Analizu"
+        "Učitaj Biblioteke", 
+        "Upload Podataka", 
+        "Pokreni Analizu"
     ])
     
     # --- KORAK 1: Učitavanje biblioteka ---

@@ -18,7 +18,9 @@ odabrana_aplikacija = st.sidebar.pills(
 
 odabrana_aplikacija = st.sidebar.segmented_control(
     "Odaberite model",
-    ["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
+    ["Kauzalni ML", 
+     "Prediktivni ML", 
+     "Sentiment Analiza"],
     default="Kauzalni ML"
 )
 

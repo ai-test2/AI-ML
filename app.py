@@ -76,6 +76,7 @@ with st.sidebar:
         default_index=0,
         styles={
             "container": {"padding": "0!important", "background-color": "transparent"},
+             "icon": {"display": "none"}, # Potpuno sakriva ikone ako ih negdje povuče
             "nav-link": {
                 "font-size": "15px",
                 "text-align": "left",

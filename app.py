@@ -3,13 +3,12 @@ import pandas as pd
 
 # 1. Postavka stranice u "wide" režim (izgled modernog portala)
 st.set_page_config(
-    page_title="AI & ML Control Center",
+    page_title="AI & ML App",
     page_icon="⚡",
     layout="wide"
 )
-
 # 2. LIJEVI PANEL (SIDEBAR) - Meni sa aplikacijama
-st.sidebar.title("🎛️ Control Portal")
+st.sidebar.title("App")
 st.sidebar.markdown("---")
 
 odabrana_aplikacija = st.sidebar.radio(

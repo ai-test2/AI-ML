@@ -11,6 +11,38 @@ st.set_page_config(
 st.sidebar.title("AI & ML modeli")
 st.sidebar.markdown("---")
 
+st.sidebar.markdown("### Odaberite model")
+
+opcije = ["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"]
+
+# Inicijalizacija stanja
+if "odabrana_aplikacija" not in st.session_state:
+    st.session_state.odabrana_aplikacija = "Kauzalni ML"
+
+# Prikaz gumba jedan ispod drugog
+for opcija in opcije:
+    # Provjeravamo je li trenutna opcija odabrana da promijenimo stil/izgled
+    is_selected = (st.session_state.odabrana_aplikacija == opcija)
+    
+    # Koristimo st.button s punom širinom unutar sidebara
+    if st.sidebar.button(
+        opcija, 
+        key=f"btn_{opcija}", 
+        use_container_width=True,
+        type="primary" if is_selected else "secondary"
+    ):
+        st.session_state.odabrana_aplikacija = opcija
+        st.rerun()
+
+odabrana_aplikacija = st.session_state.odabrana_aplikacija
+
+
+
+
+
+
+
+
 odabrana_aplikacija = st.sidebar.pills(
     "Odaberite model",
     ["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"]

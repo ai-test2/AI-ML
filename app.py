@@ -41,7 +41,6 @@ with st.sidebar:
             },
         }
     )
-
 st.sidebar.markdown("---")
 st.sidebar.caption("Sistem v1.0 | Streamlit & GitHub Connected")
 

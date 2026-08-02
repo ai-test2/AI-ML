@@ -96,6 +96,38 @@ with st.sidebar:
 
 
 
+from streamlit_option_menu import option_menu
+
+with st.sidebar:
+    st.markdown("### Odaberite model")
+    
+    odabrana_aplikacija = option_menu(
+        menu_title=None,
+        options=["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
+        icons=None,
+        default_index=0,
+        styles={
+            "container": {"padding": "0!important", "background-color": "transparent"},
+            "icon": {"display": "none"}, # Potpuno sakriva ikone ako ih negdje povuče
+            "nav-link": {
+                "font-size": "15px",
+                "text-align": "left",
+                "margin": "0px",
+                "padding": "8px 12px",
+                "border-radius": "8px",
+                "--hover-color": "rgba(150, 150, 150, 0.1)",
+            },
+            "nav-link-selected": {
+                "background-color": "rgba(150, 150, 150, 0.15)",
+                "font-weight": "600",
+                "border-radius": "8px",
+            },
+        }
+    )
+
+
+
+
 
 
 

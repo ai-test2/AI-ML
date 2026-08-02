@@ -42,7 +42,7 @@ with st.sidebar:
         }
     )
 
-# Donji dio sidebara (automatski se lijepi za dno)
+# Donji dio sidebara (ispravno uvučeno unutar 'with bottom_container:')
     bottom_container = st.container()
     with bottom_container:
 st.sidebar.markdown("---")

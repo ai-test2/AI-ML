@@ -30,12 +30,12 @@ with st.sidebar:
                 "margin": "0px",
                 "padding": "8px 12px",
                 "border-radius": "8px", # Zaobljeni rubovi u Google stilu
-                "--hover-color": "rgba(170, 170, 170, 0.1)", # Suptilni hover efekt
+                "--hover-color": "rgba(160, 160, 160, 0.1)", # Suptilni hover efekt
             },
             # Google-like aktivna stavka: nježna siva pozadina i tamniji/jasniji tekst
             "nav-link-selected": {
-                "background-color": "rgba(170, 170, 170, 0.1)", 
-              
+                "background-color": "rgba(160, 160, 160, 0.1)", 
+                "color": "#4F4F4F", # Prilagodi boju teksta ako želiš (ili makni ovu liniju pa će uzeti temu)
                 "font-weight": "600",
                 "border-radius": "8px",
             },

@@ -1,43 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-import streamlit as st
-
-# Prilagođeni CSS za razmak između tabova
-st.markdown(
-    """
-    <style>
-    /* Povećava razmak između pojedinačnih tabova */
-    .stTabs [data-baseweb="tab"] {
-        margin-right: 140px; 
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Tvoji tabovi
-korak1, korak2, korak3 = st.tabs([
-    "Učitaj Biblioteke", "Upload Podataka", "Pokreni Analizu"
-])
-
-with korak1:
-    st.write("Ovdje ide sadržaj za korak 1")
-
-with korak2:
-    st.write("Ovdje ide sadržaj za korak 2")
-
-with korak3:
-    st.write("Ovdje ide sadržaj za korak 3")
-
-
-
-
-
-
-
-
-
 # 1. Postavka stranice u "wide" režim (izgled modernog portala)
 st.set_page_config(
     page_title="AI & ML App",

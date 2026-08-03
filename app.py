@@ -9,7 +9,7 @@ st.markdown(
     <style>
     /* Povećava razmak između pojedinačnih tabova */
     .stTabs [data-baseweb="tab"] {
-        margin-right: 40px; 
+        margin-right: 140px; 
     }
     </style>
     """,

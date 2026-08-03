@@ -60,10 +60,7 @@ if odabrana_aplikacija == "Kauzalni ML":
     button[data-baseweb="tab"] {
         margin-right: 30px !important;
     }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+   
 
 
 

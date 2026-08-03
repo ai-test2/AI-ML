@@ -52,7 +52,7 @@ if odabrana_aplikacija == "Kauzalni ML":
     st.write("Dobrodošli u modul za kauzalno modeliranje. Pratite korake ispod:")
 
     # Gumbovi / Tabovi na vrhu radnog prostora za tok rada (Workflow)
-    korak1, korak2, korak3 = st.tabs([
+    korak1, korak2, korak3, korak4 = st.tabs([
         "Učitaj Biblioteke", "Upload Podataka", "Pokreni Analizu", "Pokreni Analizu"
     ])
  

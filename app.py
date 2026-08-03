@@ -72,9 +72,6 @@ if odabrana_aplikacija == "Kauzalni ML":
 
 
     
-    st.write("")
-
-
 
 # 3. GLAVNI RADNI PROSTOR
 if odabrana_aplikacija == "Kauzalni ML":

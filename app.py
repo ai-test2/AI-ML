@@ -50,6 +50,24 @@ with st.sidebar:
 if odabrana_aplikacija == "Kauzalni ML":
     st.title("Kauzalni ML")
     st.write("Dobrodošli u modul za kauzalno modeliranje. Pratite korake ispod:")
+
+import streamlit as st
+
+# Pouzdaniji CSS za razmak između tabova
+st.markdown(
+    """
+    <style>
+    /* Cilja direktno Streamlit dugmad tabova i dodaje razmak desno */
+    button[data-baseweb="tab"] {
+        margin-right: 30px !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+
     
     # Gumbovi / Tabovi na vrhu radnog prostora za tok rada (Workflow)
     korak1, korak2, korak3 = st.tabs([

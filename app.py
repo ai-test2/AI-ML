@@ -166,3 +166,124 @@ elif odabrana_aplikacija == "Prediktivni ML":
 elif odabrana_aplikacija == "Sentiment Analiza":
   st.title("💬 Sentiment Analiza Modul")
   st.warning("U izradi...")
+
+
+
+
+import streamlit as st
+from streamlit_option_menu import option_menu
+
+st.set_page_config(page_title="AI & ML App", page_icon="⚡", layout="wide")
+
+# 1. CSS stilovi: pomjeranje strelice expandera desno + stil za gumbe koraka
+st.markdown(
+    """
+    <style>
+    /* Prebacuje strelicu expandera na desnu stranu */
+    .streamlit-expanderHeader {
+        flex-direction: row-reverse !important;
+        justify-content: space-between !important;
+    }
+    
+    /* Uklanja pozadinu i daje izgled čistog linka za gumbe koraka u meniju */
+    div.stButton > button {
+        width: 100%;
+        text-align: left;
+        background-color: transparent;
+        border: none;
+        color: #31333F;
+        font-size: 14px;
+        padding: 6px 10px;
+        border-radius: 6px;
+    }
+    div.stButton > button:hover {
+        background-color: rgba(155, 155, 155, 0.1);
+        color: #8B0000; /* Tamnocrvena na hover */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# 2. GLAVNI MENI u sidebaru
+with st.sidebar:
+  st.markdown("### AI & ML modeli")
+
+  odabrana_aplikacija = option_menu(
+      menu_title=None,
+      options=["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
+      icons=["diagram-3", "graph-up", "chat-square-text"],
+      default_index=0,
+  )
+
+  st.markdown("---")
+
+  # Pamćenje aktivnog koraka kroz session_state da bi boja ostala promijenjena
+  if "aktivni_korak" not in st.session_state:
+    st.session_state.aktivni_korak = "1. Učitavanje biblioteka"
+
+  # Padajući meni za Kauzalni ML sa strelicom desno
+  if odabrana_aplikacija == "Kauzalni ML":
+    with st.expander("📌 Koraci kauzalnog toka", expanded=True):
+
+      # Lista koraka definisana kroz obična dugmad (nema kružića!)
+      koraci_lista = [
+          "1. Učitavanje biblioteka",
+          "2. Upload podataka",
+          "3. ATE",
+          "4. CATE & SHAP",
+          "5. Potencijal varijabli T",
+          "6. Decision Tree Rules",
+          "7. Best Channel Allocation",
+          "8. Uplift Kvadrantna Segmentacija",
+          "9. Causal Assumptions",
+          "10. Refutation / Sensitivity Tests",
+          "11. Qini Curve & AUUC",
+      ]
+
+      for korak in koraci_lista:
+        # Ako je korak aktivan, bojimo ga u tamnocrveno (#8B0000) ili plavo
+        is_active = st.session_state.aktivni_korak == korak
+        button_color = "#8B0000" if is_active else "#31333F"
+        font_weight = "bold" if is_active else "normal"
+
+        # Kreiramo dugme za svaki korak
+        if st.button(korak, key=f"btn_{korak}"):
+          st.session_state.aktivni_korak = korak
+          st.rerun()
+
+# 3. GLAVNI RADNI PROSTOR
+if odabrana_aplikacija == "Kauzalni ML":
+  st.title("Kauzalni ML Hub")
+  st.markdown(
+      f"Trenutno odabrani korak: **{st.session_state.aktivni_korak}**"
+  )
+  st.markdown("---")
+
+  # Prikaz sadržaja na osnovu aktivnog koraka iz memorije
+  current = st.session_state.aktivni_korak
+
+  if current == "1. Učitavanje biblioteka":
+    st.subheader("Učitavanje potrebnih Python paketa")
+    if st.button("Pokreni učitavanje biblioteka"):
+      st.success("Biblioteke uspješno učitane!")
+
+  elif current == "2. Upload podataka":
+    st.subheader("Unos i validacija podataka")
+    uploaded_file = st.file_uploader("Dodajte CSV datoteku", type=["csv"])
+    if uploaded_file is not None:
+      st.write("Podaci spremni za analizu.")
+
+  elif current == "3. ATE":
+    st.subheader("ATE (Average Treatment Effect)")
+    st.write("Ovdje se izvršava ATE analiza...")
+
+elif odabrana_aplikacija == "Prediktivni ML":
+  st.title("📈 Prediktivni ML Modul")
+  st.warning("Modul je u izradi.")
+
+elif odabrana_aplikacija == "Sentiment Analiza":
+  st.title("💬 Sentiment Analiza Modul")
+  st.warning("Modul je u izradi.")
+
+    

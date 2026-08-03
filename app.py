@@ -42,35 +42,6 @@ with st.sidebar:
         }
     )
 
-
-
-
-# ----------------------------------------------------
-# KAUZALNI ML SEKCIJA
-# ----------------------------------------------------
-if odabrana_aplikacija == "Kauzalni ML":
-  # Ovaj podmeni se POJAVLJUJE SAMO KADA JE IZABRAN "Kauzalni ML"
-  st.sidebar.markdown("### Koraci kauzalnog toka")
-
-  korak = st.sidebar.radio(
-      "Izaberite korak:",
-      [
-          "1. Učitavanje biblioteka",
-          "2. Upload podataka",
-          "3. ATE (Average Treatment Effect)",
-          "4. CATE & SHAP",
-          "5. Potencijal varijabli T",
-          "6. Decision Tree Rules",
-          "7. Best Channel Allocation",
-          "8. Uplift Kvadrantna Segmentacija",
-          "9. Causal Assumptions",
-          "10. Refutation / Sensitivity Tests",
-          "11. Qini Curve & AUUC",
-      ],
-  )
-
-
-
     
 
 # 3. GLAVNI RADNI PROSTOR
@@ -116,3 +87,82 @@ elif odabrana_aplikacija == "Prediktivni ML":
 elif odabrana_aplikacija == "Sentiment Analiza":
     st.title("💬 Sentiment Analiza Modul")
     st.warning("Ovaj modul je trenutno u fazi izrade.")
+
+
+
+
+
+
+
+
+
+
+
+import streamlit as st
+from streamlit_option_menu import option_menu
+
+st.set_page_config(page_title="AI & ML App", page_icon="⚡", layout="wide")
+
+# 1. Glavni meni u sidebaru preko option_menu
+with st.sidebar:
+  st.markdown("### AI & ML modeli")
+
+  odabrana_aplikacija = option_menu(
+      menu_title=None,
+      options=["Kauzalni ML", "Prediktivni ML", "Sentiment Analiza"],
+      icons=["diagram-3", "graph-up", "chat-square-text"],
+      default_index=0,
+  )
+
+  st.markdown("---")
+
+  # 2. Ako je izabran Kauzalni ML, ispod se pojavljuje Expander (padajući meni sa strelicom)
+  if odabrana_aplikacija == "Kauzalni ML":
+    with st.expander("📌 Koraci kauzalnog toka", expanded=True):
+      # Ovdje biraš korake preko radio dugmića unutar expandera
+      korak = st.radio(
+          "Izaberi korak:",
+          [
+              "1. Učitavanje biblioteka",
+              "2. Upload podataka",
+              "3. ATE",
+              "4. CATE & SHAP",
+              "5. Potencijal varijabli T",
+              "6. Decision Tree Rules",
+              "7. Best Channel Allocation",
+              "8. Uplift Kvadrantna Segmentacija",
+              "9. Causal Assumptions",
+              "10. Refutation / Sensitivity Tests",
+              "11. Qini Curve & AUUC",
+          ],
+          label_visibility="collapsed",
+      )
+
+# 3. Glavni radni prostor
+if odabrana_aplikacija == "Kauzalni ML":
+  st.title("Kauzalni ML Hub")
+
+  # Prikaz sadržaja na osnovu izabranog koraka iz expandera
+  if korak == "1. Učitavanje biblioteka":
+    st.subheader("Učitavanje potrebnih Python paketa")
+    # Ovdje pozivaš funkciju iz svog causal_ml/koraci.py fajla
+    if st.button("Učitaj CausalML"):
+      st.success("Biblioteke učitane!")
+
+  elif korak == "2. Upload podataka":
+    st.subheader("Unos podataka")
+    uploaded_file = st.file_uploader("Dodajte CSV", type=["csv"])
+    if uploaded_file is not None:
+      st.write("Podaci učitani...")
+
+  elif korak == "3. ATE":
+    st.subheader("ATE Analiza")
+    st.write("Ovdje ide kod za ATE...")
+
+elif odabrana_aplikacija == "Prediktivni ML":
+  st.title("📈 Prediktivni ML Modul")
+  st.warning("U izradi...")
+
+elif odabrana_aplikacija == "Sentiment Analiza":
+  st.title("💬 Sentiment Analiza Modul")
+  st.warning("U izradi...")

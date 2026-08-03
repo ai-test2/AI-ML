@@ -50,19 +50,6 @@ with st.sidebar:
 if odabrana_aplikacija == "Kauzalni ML":
     st.title("Kauzalni ML")
     st.write("Dobrodošli u modul za kauzalno modeliranje. Pratite korake ispod:")
-
-# Prilagođeni CSS za razmak između tabova
-st.markdown(
-    """
-    <style>
-    /* Povećava razmak između pojedinačnih tabova */
-    .stTabs [data-baseweb="tab"] {
-        margin-right: 140px; 
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
     
     # Gumbovi / Tabovi na vrhu radnog prostora za tok rada (Workflow)
     korak1, korak2, korak3 = st.tabs([

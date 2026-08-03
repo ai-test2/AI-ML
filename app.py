@@ -56,15 +56,6 @@ if odabrana_aplikacija == "Kauzalni ML":
         "Učitaj Biblioteke", "Upload Podataka", "Pokreni Analizu"
     ])
  
-    button[data-baseweb="tab"] {
-        margin-right: 30px !important;
-    }
-   
-
-
-
-
-    
     # --- KORAK 1: Učitavanje biblioteka ---
     with korak1:
         st.subheader("Učitavanje potrebnih Python paketa")

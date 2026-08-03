@@ -55,8 +55,7 @@ if odabrana_aplikacija == "Kauzalni ML":
     korak1, korak2, korak3 = st.tabs([
         "Učitaj Biblioteke", "Upload Podataka", "Pokreni Analizu"
     ])
- <style>
-    /* Cilja direktno Streamlit dugmad tabova i dodaje razmak desno */
+ 
     button[data-baseweb="tab"] {
         margin-right: 30px !important;
     }

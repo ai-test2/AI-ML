@@ -52,8 +52,8 @@ if odabrana_aplikacija == "Kauzalni ML":
     st.write("Dobrodošli u modul za kauzalno modeliranje. Pratite korake ispod:")
 
     # Gumbovi / Tabovi na vrhu radnog prostora za tok rada (Workflow)
-    korak1, korak2, korak3, korak4 = st.tabs([
-        "Učitavanje biblioteka", "", "Upload podataka", "Pokreni Analizu", "ATE", "CATE & SHAP", "Potencijal varijabli T", "Decision Tree Rules", "Best Channel Allocation", "Uplift Kvadrantna Segmentacija", "Causal Assumptions", "Refutation / Sensitivity Tests", "Qini Curve & AUUC",
+    korak1, korak2, korak3, korak4, korak5, korak6, korak7, korak8, korak9, korak10, korak11, korak12, korak13, korak14, korak15, korak16, korak17, korak18, korak19, korak20, korak21, = st.tabs([
+        "Učitavanje biblioteka", "", "Upload podataka", "", "ATE", "", "CATE & SHAP", "", "Potencijal varijabli T", "", "Decision Tree Rules", "", "Best Channel Allocation", "", "Uplift Kvadrantna Segmentacija", "", "Causal Assumptions", "", "Refutation / Sensitivity Tests", "", "Qini Curve & AUUC",
     ])
  
     # --- KORAK 1: Učitavanje biblioteka ---

@@ -51,8 +51,6 @@ if odabrana_aplikacija == "Kauzalni ML":
     st.title("Kauzalni ML")
     st.write("Dobrodošli u modul za kauzalno modeliranje. Pratite korake ispod:")
 
-    import streamlit as st
-
 # Prilagođeni CSS za razmak između tabova
 st.markdown(
     """
@@ -65,14 +63,6 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
-
-
-
-
-
-
-
     
     # Gumbovi / Tabovi na vrhu radnog prostora za tok rada (Workflow)
     korak1, korak2, korak3 = st.tabs([

@@ -24,18 +24,17 @@ with st.sidebar:
         styles={
             "container": {"padding": "0!important", "background-color": "transparent"},
              "icon": {"display": "none"}, # Potpuno sakriva ikone ako ih negdje povuče
-             "bold": {"display": "none"}, # Potpuno sakriva bold ako ih negdje povuče
             "nav-link": {
                 "font-size": "15px",
                 "text-align": "left",
                 "margin": "0px",
                 "padding": "8px 12px",
                 "border-radius": "8px", # Zaobljeni rubovi u Google stilu
-                "--hover-color": "rgba(150, 150, 150, 0.1)", # Suptilni hover efekt
+                "--hover-color": "rgba(180, 180, 180, 0.1)", # Suptilni hover efekt
             },
             # Google-like aktivna stavka: nježna siva pozadina i tamniji/jasniji tekst
             "nav-link-selected": {
-                "background-color": "rgba(150, 150, 150, 0.15)", 
+                "background-color": "rgba(180, 180, 180, 0.1)", 
                 "color": "#1f1f1f", # Prilagodi boju teksta ako želiš (ili makni ovu liniju pa će uzeti temu)
                 "font-weight": "600",
                 "border-radius": "8px",

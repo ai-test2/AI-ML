@@ -35,8 +35,8 @@ with st.sidebar:
             # Google-like aktivna stavka: nježna siva pozadina i tamniji/jasniji tekst
             "nav-link-selected": {
                 "background-color": "rgba(160, 160, 160, 0.1)", 
-                "color": "#4F4F4F", # Prilagodi boju teksta ako želiš (ili makni ovu liniju pa će uzeti temu)
-                "font-weight": "600",
+                "color": "#585858", # Prilagodi boju teksta ako želiš (ili makni ovu liniju pa će uzeti temu)
+                "font-weight": "500",
                 "border-radius": "8px",
             },
         }

@@ -42,6 +42,37 @@ with st.sidebar:
         }
     )
 
+
+
+st.sidebar.markdown("---")
+
+# ----------------------------------------------------
+# KAUZALNI ML SEKCIJA
+# ----------------------------------------------------
+if odabrana_aplikacija == "Kauzalni ML":
+  # Ovaj podmeni se POJAVLJUJE SAMO KADA JE IZABRAN "Kauzalni ML"
+  st.sidebar.markdown("### Koraci kauzalnog toka")
+
+  korak = st.sidebar.radio(
+      "Izaberite korak:",
+      [
+          "1. Učitavanje biblioteka",
+          "2. Upload podataka",
+          "3. ATE (Average Treatment Effect)",
+          "4. CATE & SHAP",
+          "5. Potencijal varijabli T",
+          "6. Decision Tree Rules",
+          "7. Best Channel Allocation",
+          "8. Uplift Kvadrantna Segmentacija",
+          "9. Causal Assumptions",
+          "10. Refutation / Sensitivity Tests",
+          "11. Qini Curve & AUUC",
+      ],
+  )
+
+
+
+    
     st.write("")
 
 
